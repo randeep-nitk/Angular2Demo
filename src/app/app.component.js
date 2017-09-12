@@ -11,6 +11,7 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.pageHeader = 'Employee Details';
+        this.isDisabled = false;
         this.firstName = 'Randeep';
         this.lastName = 'Singh';
     }
@@ -20,7 +21,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div>\n                        <h1>{{getFullName()}}</h1>\n                        <my-employee></my-employee>\n                  </div>"
+            template: "<div>\n                        <h1>{{getFullName()}}</h1>\n                        <my-employee></my-employee>\n                        <button [disabled]='isDisabled'>Click Me!</button>\n                  </div>"
         })
     ], AppComponent);
     return AppComponent;
